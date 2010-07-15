@@ -9,8 +9,10 @@ class News < ActiveRecord::Base
   column :news_id, :integer
   column :title, :string
   column :published_at, :string
+  column :updated_at, :string
   column :image, :string
   column :body, :string
+  column :source_name, :string
 
   def self.find(*args)  
     if args.first.to_s == 'all'
@@ -23,8 +25,10 @@ class News < ActiveRecord::Base
         :news_id => doc.at_css("id").text,
         :title => doc.at_css("header").text,
         :published_at => doc.at_css("published_at").text,
+        :updated_at => doc.at_css("updated_at").text,
         :image => image,
-        :body => doc.at_css("body").content
+        :body => doc.at_css("body").content,
+        :source_name => doc.at_css("source_name").text
       )
     end
   end

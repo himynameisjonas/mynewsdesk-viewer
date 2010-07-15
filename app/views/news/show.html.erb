@@ -1,12 +1,15 @@
 <% content_for :aside do -%>
   <%= link_to "tillbaka", root_path() %>
 <% end -%>
+<% content_for :title, @pressrelease.title %>
 
 <article>
   <header>
+    <h2><%= @pressrelease.source_name %></h2>
     <h1><%= link_to @pressrelease.title, news_path(@pressrelease.news_id) %></h1>
     <p>
-      Publicerad <time datetime="<%= DateTime.parse(@pressrelease.published_at) %>"><%= @pressrelease.published_at %></time>
+      Publicerad <time datetime="<%= DateTime.parse(@pressrelease.published_at) %>"><%= @pressrelease.published_at %></time>,
+      Uppdaterad <time datetime="<%= DateTime.parse(@pressrelease.updated_at) %>"><%= @pressrelease.updated_at %></time>
     </p>
   </header>
   <%= image_tag @pressrelease.image unless @pressrelease.image.nil? %>

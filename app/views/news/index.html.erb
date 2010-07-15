@@ -2,7 +2,7 @@
   <h1>Senaste pressreleaser</h1>
 </header>
 
-<nav>
+<nav id="pressreleases">
   <ul>
   <% for pressrelease in @pressreleases %>
       <li><%= link_to pressrelease.at_css("header").text, news_path(pressrelease.at_css("id").text) %></li>
