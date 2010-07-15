@@ -1,3 +1,5 @@
+<article>
 <h1><%= link_to @pressrelease.at_css("header").text, news_path(@pressrelease.at_css("id").text) %></h1>
-<%= image_tag @pressrelease.at_css("image_thumbnail_large").text, :title => "title", :class => "class" unless @pressrelease.at_css("image_thumbnail_large").nil? %>
+<%= image_tag @pressrelease.at_css("image").text, :title => "title", :class => "class" unless @pressrelease.at_css("image_thumbnail_large").nil? %>
 <%= @pressrelease.at_css("body").content %>
+</article>
