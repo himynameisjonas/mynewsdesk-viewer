@@ -1,0 +1,5 @@
+<ul>
+<% for pressrelease in @pressreleases %>
+    <li><%= link_to pressrelease.at_css("header").text, news_path(pressrelease.at_css("id").text) %></li>
+<% end %>
+</ul>
