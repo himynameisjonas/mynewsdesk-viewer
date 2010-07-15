@@ -1,2 +1,16 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+// infinitescroll() is called on the element that surrounds 
+// the items you will be loading more of
+
+$(document).ready(function(){
+   console.log("hello")
+   $('#content nav ul').infinitescroll({
+      navSelector  : "nav#pagination",
+      // selector for the paged navigation (it will be hidden)
+      nextSelector : "nav#pagination #next",
+      // selector for the NEXT link (to page 2)
+      itemSelector : "#content li",
+      // selector for all items you'll retrieve
+      debug: true,
+   });
+})
+

@@ -4,8 +4,13 @@
   <meta charset="utf-8">
   <title>Page Title</title>
   <%= stylesheet_link_tag 'style', :cache => true %>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <%= javascript_include_tag "jquery.infinitescroll.min" ,"application", :cache => true %>
 </head>
 <body>
+  <aside>
+    <%= yield(:aside) %>
+  </aside>
   <section id="content">
     <%= yield %>
   </section>
