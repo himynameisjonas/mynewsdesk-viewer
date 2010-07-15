@@ -1,5 +1,8 @@
-<ul>
-<% for pressrelease in @pressreleases %>
-    <li><%= link_to pressrelease.at_css("header").text, news_path(pressrelease.at_css("id").text) %></li>
-<% end %>
-</ul>
+<h1>Senaste pressreleaser</h1>
+<nav>
+  <ul>
+  <% for pressrelease in @pressreleases %>
+      <li><%= link_to pressrelease.at_css("header").text, news_path(pressrelease.at_css("id").text) %></li>
+  <% end %>
+  </ul>
+</nav>

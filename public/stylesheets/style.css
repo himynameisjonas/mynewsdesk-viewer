@@ -56,6 +56,7 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    color: inherit;
 }
 
 ins {
@@ -114,12 +115,14 @@ p {
 
 h1 {
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	font-size: 70px;
+	font-size: 65px;
 	line-height: 1em;
 	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 5px solid;
 }
 
-h1 a {
+h1 a, article h1 a{
 	text-decoration: none;
 	color: inherit;
 }
@@ -128,7 +131,7 @@ h1 a {
 	display: block;
 	background: #f6f6f6;
 	width: 75%;
-	min-width: 650px;
+	min-width: 550px;
 	max-width: 900px;
 	padding: 20px;
 	float: right;
@@ -143,9 +146,23 @@ article img {
 	margin-bottom: 20px;
 }
 
+article a {
+	color: #c9e29a;
+}
 
+nav li a{
+	float: left;
+	display: block;
+	width: 20%;
+	height: 200px;
+	padding: 10px;
+	margin: 0 20px 20px 0;
+	background-color: #c9e29a;
+	overflow: hidden;
+	font: 21px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
 
-
-
-
-
+nav a {
+	text-decoration: none;
+	
+}
