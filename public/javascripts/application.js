@@ -6,7 +6,9 @@ $(document).ready(function(){
       itemSelector:  "#content li",
       debug:         true,
       loadingText:   "Laddar in fler pressreleaser",
-      loadingImg:    "/images/loading.gif"
+      loadingImg:    "/images/loading.gif",
+      animate:       true,
+      bufferPx:      10
    });
 })
 
