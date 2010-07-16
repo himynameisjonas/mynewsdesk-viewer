@@ -5,7 +5,8 @@ $(document).ready(function(){
       nextSelector:  "nav#pagination #next",
       itemSelector:  "#content li",
       debug:         true,
-      loadingText:   "Laddar in fler pressreleaser..."
+      loadingText:   "Laddar in fler pressreleaser",
+      loadingImg:    "/images/loading.gif"
    });
 })
 

@@ -104,7 +104,7 @@ input, select {
 
 
 body {
-	background-color: #BF3F5F;
+	background-color: #411f13;
 	margin-top: 20px;;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	line-height: 140%;
@@ -201,4 +201,5 @@ nav a {
 
 #infscr-loading {
 	margin-top: 20px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
