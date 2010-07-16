@@ -4,7 +4,9 @@ class NewsController < ApplicationController
     require 'open-uri'
     if params[:page].nil?
       offset = 0
+      @page = 2
     else
+      @page = params[:page].to_i+1
       offset = params[:page].to_i*20-20
     end
     doc = Nokogiri::XML(open("http://www.mynewsdesk.com/partner/api/1_0/a9e6a7533e996a5c2a3275d5b393a4b0/channel/290/material/list/?type_of_media=pressreleases&limit=20&offset=#{offset}"))
